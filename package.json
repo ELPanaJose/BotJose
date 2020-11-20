@@ -1,15 +1,21 @@
 {
-  "name": "bot_jose",
-  "version": "1.0.0",
+  "name": "bojose",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "node server.js",
+  "authors":["ranon-rat","ElPanaJose"],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.3.1"
-  }
+   
+    "cheerio": "^0.22.0",
+    "axios": "^0.21.0",
+    "discord.js": "^12.4.0"
+  },
+  "repository": {
+    "url": "https://github.com/ELPanaJose/BotJose"
+  },
+  "license": "GNU"
 }
