@@ -28,7 +28,9 @@ client.on("message", msg => {
   if (msg.content==="lorem"){
     msg.channel.send(embed)
   }
-  
+  if (msg.content==="bitch"){
+       msg.reply("shut up bitch")
+  }
   
 });
 
