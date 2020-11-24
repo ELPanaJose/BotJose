@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "",
   "main": "node server.js",
-  "authors":["ranon-rat","ElPanaJose"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -14,8 +13,16 @@
     "axios": "^0.21.0",
     "discord.js": "^12.4.0"
   },
-  "repository": {
-    "url": "https://github.com/ELPanaJose/BotJose"
+  "engines": {
+    "node": "10.x"
   },
-  "license": "GNU"
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }
