@@ -26,17 +26,16 @@ const storyLinks = ["https://www.reddit.com/r/entitledparents/new/"];
 const historias = [];
 //packages
 var img = [];
-const Discord = require("discord.js"), // di
+const Discord = require("discord.js"), // discord bots
   axios = require("axios"), //http request
   cheerio = require("cheerio"); //web scrapping
 const help = new Discord.MessageEmbed()
   .setTitle(
-    "puro momo rey 🤑" // 
+    "puro momo rey 🤑" 
   )
   .setDescription(
     "``` *help te da informacion sobre los comandos ( for now the bot is only in spanih, but in a future it will be memes in english :D)\n\n *monda de solo puro momo \n\n  *bruh : si \n\n  *nm para agregar nuevos memes  \n\n *cm solo te da informacion de cuantos memes tienes \n\n *meme solo te da un momo \n\n *callao es solo para insultar ```"
   );
-//objects
 
 const client = new Discord.Client(),
   commands = {
@@ -72,15 +71,17 @@ const client = new Discord.Client(),
     },
 
     "*monda": async function(msg) {
- 
       msg.channel.send("El pana brother jorge floyd todo un idolo  :bruh:");
       msg.channel.send("https://www.youtube.com/watch?v=IRZWiqBHYaY");
       msg.channel.send(
         "https://ichef.bbci.co.uk/news/640/cpsprodpb/8862/production/_112541943_whatsubject.jpg"
       );
-
-
     },
+    
+    "*chill" : async function(msg){
+      msg.channel.send("chill")
+    },
+    
     "*help": async function(msg) {
       msg.channel.send(help);
     }
@@ -97,12 +98,13 @@ client.on("ready", () => {
 
   console.log(`BOT_JOSE LISTO!!! ${client.user.tag}!`);
 });
-/*
-aweonao nazi kkkkkk
-*/
+
 client.on("message", msg => {
   if (commands.hasOwnProperty(msg.content)) {
     commands[msg.content](msg);
+  }
+  if (/\chill/i.test(msg.content) && !msg.author.bot) {
+    msg.author.send("chill");
   }
 });
 client.login("token");
