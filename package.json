@@ -1,0 +1,21 @@
+{
+  "name": "BotJose",
+  "version": "1.0.0",
+  "description": "A Discord bot written in typescript",
+  "main": "index.js",
+  "repository": "https://github.com/ELPanaJose/BotJose",
+  "scripts": {
+    "start": "tsc && node dist/src/index"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@ayanaware/logger": "^2.2.1",
+    "discord.js": "^12.5.1",
+    "pg": "^8.5.1",
+    "typeorm": "^0.2.30"
+  }
+}
