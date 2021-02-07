@@ -11,10 +11,11 @@ module.exports = class BotClient extends Client {
 
     this.on("ready", () => {
       this.logger.info("ready");
+      this.user.setStatus({ status: "dnd" });
     });
 
     this.on("message", (message) => {
-      const prefix = "!";
+      const prefix = "*";
       if (!message.content.startsWith(prefix) || message.author.bot) return;
       const args = message.content.slice(prefix.length).split(/ +/);
       const command = args.shift().toLowerCase();
