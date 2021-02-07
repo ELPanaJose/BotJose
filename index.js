@@ -1,7 +1,8 @@
 const BotClient = require("./client");
+const { token } = require("./config.json");
 
 const client = new BotClient({
-  token: "replace with your token",
+  token: token,
 });
 
 client.run();
