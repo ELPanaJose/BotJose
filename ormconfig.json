@@ -1,0 +1,14 @@
+{
+	"name": "default",
+	"type": "postgres",
+	"host": "postgres",
+	"port": 5432,
+	"username": "nerd",
+	"password": "nerdiscool",
+	"database": "typeorm",
+	"synchronize": true,
+	"logging": true,
+	"entities": [
+		"dist/entities/*.js"
+	]
+}

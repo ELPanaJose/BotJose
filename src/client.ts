@@ -4,6 +4,7 @@ import { BotOptions } from "./interfaces/BotOptions";
 import logger from "@ayanaware/logger";
 import path from "path";
 import { Command } from "./interfaces/Command";
+import { createConnection } from "typeorm";
 
 export default class BotClient extends Client {
   public BotOptions: BotOptions;
@@ -45,8 +46,9 @@ export default class BotClient extends Client {
     }
   }
 
-  start() {
+  async start() {
     super.login(this.BotOptions.token);
     this.loadCommands();
+    await createConnection().then(() => this.logger.info("Connected to db"));
   }
 }

@@ -1,1 +1,1 @@
-docker build -t botjose . && docker run -d botjose
+docker build -t botjose . && docker-compose up
